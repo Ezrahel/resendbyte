@@ -39,8 +39,8 @@
     "@resendbyte/errors": "workspace:*",
     "@resendbyte/logger": "workspace:*",
     "@resendbyte/types": "workspace:*",
-    "kysely": "^0.27.0",
-    "pg": "^8.22.0"
+    "cockroachdb": "^1.0.3",
+    "kysely": "^0.27.0"
   },
   "devDependencies": {
     "@resendbyte/tsconfig": "workspace:*",

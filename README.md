@@ -77,7 +77,7 @@ pnpm dev
 cp .env.example .env
 
 # Required variables
-DATABASE_URL=postgresql://postgres:postgres@localhost:5432/resendbyte
+DATABASE_URL=postgresql://user:password@host:26257/defaultdb?sslmode=require
 REDIS_URL=redis://localhost:6379
 JWT_SECRET=your-super-secret-key-at-least-32-chars
 NODE_ENV=development

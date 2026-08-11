@@ -1,10 +1,21 @@
 import { Kysely, PostgresDialect, sql } from "kysely";
-import pg from "pg";
+import cockroachdb from "cockroachdb";
 import type { DB } from "./types.js";
 import { env } from "@resendbyte/config";
 import { logger } from "@resendbyte/logger";
 
-const { Pool } = pg;
+const { Pool } = cockroachdb;
+
+function sslConfig(connectionString: string): boolean | { rejectUnauthorized: boolean } | undefined {
+  try {
+    const sslmode = new URL(connectionString).searchParams.get("sslmode");
+    if (!sslmode || sslmode === "disable") return undefined;
+    if (sslmode === "require" || sslmode === "prefer") return { rejectUnauthorized: false };
+    return { rejectUnauthorized: true };
+  } catch {
+    return undefined;
+  }
+}
 
 const dialect = new PostgresDialect({
   pool: new Pool({
@@ -14,6 +25,7 @@ const dialect = new PostgresDialect({
     idleTimeoutMillis: 30000,
     connectionTimeoutMillis: 5000,
     application_name: "resendbyte",
+    ssl: sslConfig(env.DATABASE_URL),
   }),
 });
 
