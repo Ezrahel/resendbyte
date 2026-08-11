@@ -24,6 +24,12 @@ const envSchema = z.object({
   BETTER_AUTH_TRUSTED_ORIGINS: z.string().optional(),
   BETTER_AUTH_API_KEY: z.string().optional(),
 
+  // Social OAuth
+  GITHUB_CLIENT_ID: z.string().optional(),
+  GITHUB_CLIENT_SECRET: z.string().optional(),
+  GOOGLE_CLIENT_ID: z.string().optional(),
+  GOOGLE_CLIENT_SECRET: z.string().optional(),
+
   // Rate Limiting
   RATE_LIMIT_WINDOW_MS: z.coerce.number().default(60000),
   RATE_LIMIT_MAX_REQUESTS: z.coerce.number().default(1000),

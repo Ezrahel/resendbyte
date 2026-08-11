@@ -3,8 +3,21 @@ import "./globals.css";
 import { ToastProvider } from "@/components/ui/Toast";
 
 export const metadata: Metadata = {
-  title: "ResendByte — Email Service",
-  description: "Email delivery platform",
+  title: "ResendByte — The email API your users never think about",
+  description:
+    "ResendByte is the transactional email platform built for developers and ops teams — deliverability tooling, real-time analytics, and provider failover, wrapped in one API.",
+  openGraph: {
+    title: "ResendByte — The email API your users never think about",
+    description:
+      "Send transactional email with one API call. Deliverability tooling, real-time analytics, and provider failover in a single platform.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ResendByte — The email API your users never think about",
+    description:
+      "Send transactional email with one API call. Deliverability tooling, real-time analytics, and provider failover in a single platform.",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

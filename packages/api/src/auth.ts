@@ -14,6 +14,18 @@ export const auth = betterAuth({
   secret: env.BETTER_AUTH_SECRET,
   trustedOrigins: env.BETTER_AUTH_TRUSTED_ORIGINS?.split(",") || [],
   database: kyselyAdapter(db, { type: "postgres" }),
+  socialProviders: {
+    github: {
+      clientId: env.GITHUB_CLIENT_ID || "",
+      clientSecret: env.GITHUB_CLIENT_SECRET || "",
+      enabled: env.GITHUB_CLIENT_ID && env.GITHUB_CLIENT_SECRET ? true : false,
+    },
+    google: {
+      clientId: env.GOOGLE_CLIENT_ID || "",
+      clientSecret: env.GOOGLE_CLIENT_SECRET || "",
+      enabled: env.GOOGLE_CLIENT_ID && env.GOOGLE_CLIENT_SECRET ? true : false,
+    },
+  },
   emailAndPassword: {
     enabled: true,
     requireEmailVerification: true,
