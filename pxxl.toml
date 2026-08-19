@@ -1,20 +1,8 @@
-[services.api]
-baseDirectory = "packages/api"
+[build]
 language = "javascript"
 packageManager = "pnpm"
 nodeVersion = "22"
+port = 3000
 installCommand = "NODE_ENV=development pnpm install --frozen-lockfile"
 buildCommand = "pnpm --filter @resendbyte/api... build"
-startCommand = "node dist/server.js"
-port = 3000
-
-[services.web]
-baseDirectory = "apps/web"
-language = "javascript"
-framework = "nextjs"
-packageManager = "pnpm"
-nodeVersion = "22"
-installCommand = "NODE_ENV=development pnpm install --frozen-lockfile"
-buildCommand = "pnpm --filter @resendbyte/web... build"
-startCommand = "next start"
-port = 3000
+startCommand = "node packages/api/dist/server.js"
