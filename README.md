@@ -197,7 +197,7 @@ pnpm db:rollback
 pnpm build
 
 # Build Docker image
-docker build -t resendbyte:latest .
+docker build -f Dockerfile.prod -t resendbyte:latest .
 
 # Run production
 docker compose -f docker-compose.prod.yml up -d
