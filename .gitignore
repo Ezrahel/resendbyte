@@ -57,3 +57,5 @@ temp/
 *.pid
 *.seed
 *.pid.lock
+# Legacy submodule (no .gitmodules entry)
+email-platform/
