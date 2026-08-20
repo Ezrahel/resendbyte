@@ -149,7 +149,7 @@ export function CodeTabs() {
           </Reveal>
 
           <Reveal delay={180}>
-            <div className="mt-8 rounded-xl border border-black/[0.06] bg-white/70 p-4">
+            <div className="mt-8 rounded-xl border border-white/[0.1] bg-white/[0.05] p-4">
               <div className="text-[11px] font-semibold uppercase tracking-[0.12em] text-text-tertiary">
                 Response
               </div>

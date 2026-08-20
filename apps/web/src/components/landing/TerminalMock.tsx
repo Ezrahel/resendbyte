@@ -126,11 +126,11 @@ export function TerminalMock() {
         <TerminalBody active />
       </div>
 
-      <div className="animate-float absolute -right-3 -top-5 hidden sm:flex items-center gap-2 rounded-full border border-black/[0.06] bg-white px-3.5 py-1.5 shadow-lg">
+      <div className="animate-float absolute -right-3 -top-5 hidden sm:flex items-center gap-2 rounded-full border border-white/[0.1] bg-white/[0.06] px-3.5 py-1.5 shadow-lg">
         <Check className="h-3.5 w-3.5 text-success" strokeWidth={2.5} />
         <span className="text-[12px] font-semibold text-text-primary">Sent in 124ms</span>
       </div>
-      <div className="animate-float absolute -bottom-4 -left-3 hidden sm:flex items-center gap-2 rounded-full border border-black/[0.06] bg-white px-3.5 py-1.5 shadow-lg" style={{ animationDelay: "1.5s" }}>
+      <div className="animate-float absolute -bottom-4 -left-3 hidden sm:flex items-center gap-2 rounded-full border border-white/[0.1] bg-white/[0.06] px-3.5 py-1.5 shadow-lg" style={{ animationDelay: "1.5s" }}>
         <span className="h-2 w-2 rounded-full bg-success animate-pulse-soft" />
         <span className="text-[12px] font-semibold text-text-primary">Delivered to inbox</span>
       </div>

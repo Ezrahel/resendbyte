@@ -82,7 +82,7 @@ export default function ArchitecturePage() {
       <Section title="Workers">
         <table className="w-full text-[14px]">
           <thead>
-            <tr className="border-b border-[rgba(0,0,0,0.06)]">
+            <tr className="border-b border-[rgba(255,255,255,0.1)]">
               <th className="text-left py-2 pr-4 font-medium text-text-primary">Worker</th>
               <th className="text-left py-2 pr-4 font-medium text-text-primary">Queues</th>
               <th className="text-left py-2 font-medium text-text-primary">Purpose</th>
@@ -90,7 +90,7 @@ export default function ArchitecturePage() {
           </thead>
           <tbody>
             {workers.map((w) => (
-              <tr key={w.name} className="border-b border-[rgba(0,0,0,0.04)]">
+              <tr key={w.name} className="border-b border-[rgba(255,255,255,0.08)]">
                 <td className="py-2 pr-4 font-mono text-[13px]">{w.name}</td>
                 <td className="py-2 pr-4 text-text-secondary">{w.queues}</td>
                 <td className="py-2 text-text-secondary">{w.purpose}</td>
@@ -117,14 +117,14 @@ export default function ArchitecturePage() {
       <Section title="Technology Stack">
         <table className="w-full text-[14px]">
           <thead>
-            <tr className="border-b border-[rgba(0,0,0,0.06)]">
+            <tr className="border-b border-[rgba(255,255,255,0.1)]">
               <th className="text-left py-2 pr-4 font-medium text-text-primary">Category</th>
               <th className="text-left py-2 font-medium text-text-primary">Technology</th>
             </tr>
           </thead>
           <tbody>
             {techStack.map((t) => (
-              <tr key={t.category} className="border-b border-[rgba(0,0,0,0.04)]">
+              <tr key={t.category} className="border-b border-[rgba(255,255,255,0.08)]">
                 <td className="py-2 pr-4 text-text-secondary">{t.category}</td>
                 <td className="py-2 text-text-secondary">{t.tech}</td>
               </tr>

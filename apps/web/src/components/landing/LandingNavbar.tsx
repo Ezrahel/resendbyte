@@ -43,7 +43,7 @@ export function LandingNavbar() {
       className={clsx(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
         scrolled
-          ? "bg-[rgba(245,245,247,0.72)] backdrop-blur-xl border-b border-black/[0.06] shadow-[0_1px_0_rgba(255,255,255,0.6)_inset]"
+          ? "bg-[rgba(10,10,10,0.82)] backdrop-blur-xl border-b border-white/[0.1] shadow-[0_1px_0_rgba(255,255,255,0.06)_inset]"
           : "bg-transparent border-b border-transparent",
       )}
     >
@@ -71,7 +71,7 @@ export function LandingNavbar() {
           </Link>
           <Link
             href="/signup"
-            className="inline-flex items-center justify-center rounded-full bg-accent px-5 py-2 text-[14px] font-medium text-white no-underline transition-all duration-200 hover:bg-accent-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 disabled:opacity-50"
+            className="inline-flex items-center justify-center rounded-full bg-accent px-5 py-2 text-[14px] font-medium text-white no-underline transition-all duration-200 hover:bg-accent-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0a] disabled:opacity-50"
           >
             Get started
           </Link>
@@ -88,7 +88,7 @@ export function LandingNavbar() {
       </nav>
 
       {menuOpen && (
-        <div className="md:hidden border-t border-black/[0.06] bg-bg/95 backdrop-blur-xl px-5 py-4 animate-fade-in">
+        <div className="md:hidden border-t border-white/[0.1] bg-bg/95 backdrop-blur-xl px-5 py-4 animate-fade-in">
           <div className="flex flex-col gap-1">
             {links.map((link) => (
               <Link
@@ -101,11 +101,11 @@ export function LandingNavbar() {
               </Link>
             ))}
           </div>
-          <div className="mt-3 flex flex-col gap-2 border-t border-black/[0.06] pt-4">
+          <div className="mt-3 flex flex-col gap-2 border-t border-white/[0.1] pt-4">
             <Link
               href="/login"
               onClick={() => setMenuOpen(false)}
-              className="rounded-full border border-black/10 px-5 py-2.5 text-center text-[15px] font-medium text-text-primary no-underline hover:bg-accent-glass transition-colors"
+              className="rounded-full border border-white/15 px-5 py-2.5 text-center text-[15px] font-medium text-text-primary no-underline hover:bg-accent-glass transition-colors"
             >
               Sign in
             </Link>

@@ -79,7 +79,7 @@ export function DocsSidebar() {
 
   const sidebar = (
     <div className="flex flex-col h-full">
-      <div className="flex items-center h-14 px-4 border-b border-[rgba(0,0,0,0.06)] shrink-0">
+      <div className="flex items-center h-14 px-4 border-b border-[rgba(255,255,255,0.1)] shrink-0">
         <Link href="/docs" className="font-semibold text-[17px] tracking-tight text-text-primary no-underline">
           ResendByte Docs
         </Link>
@@ -125,7 +125,7 @@ export function DocsSidebar() {
         })}
       </nav>
 
-      <div className="p-3 border-t border-[rgba(0,0,0,0.06)] shrink-0">
+      <div className="p-3 border-t border-[rgba(255,255,255,0.1)] shrink-0">
         <Link
           href="/dashboard"
           className="flex items-center gap-2 px-3 py-2 rounded-[8px] text-[14px] text-text-secondary hover:bg-accent-glass hover:text-text-primary transition-all duration-200"
@@ -155,7 +155,7 @@ export function DocsSidebar() {
         </div>
       )}
 
-      <aside className="hidden lg:flex flex-col w-64 h-screen sticky top-0 glass border-r border-[rgba(0,0,0,0.06)] shrink-0">
+      <aside className="hidden lg:flex flex-col w-64 h-screen sticky top-0 glass border-r border-[rgba(255,255,255,0.1)] shrink-0">
         {sidebar}
       </aside>
     </>

@@ -70,7 +70,7 @@ export function Table({ columns, data, onRowClick, className }: TableProps) {
               key={row.id ?? i}
               onClick={() => onRowClick?.(row)}
               className={clsx(
-                "border-t border-[rgba(0,0,0,0.04)] transition-colors",
+                "border-t border-[rgba(255,255,255,0.08)] transition-colors",
                 onRowClick && "cursor-pointer",
                 "hover:glass-sm",
               )}

@@ -421,19 +421,19 @@ export default function ApiReferencePage() {
         <p>All requests require the following headers:</p>
         <table className="w-full text-[14px]">
           <thead>
-            <tr className="border-b border-[rgba(0,0,0,0.06)]">
+            <tr className="border-b border-[rgba(255,255,255,0.1)]">
               <th className="text-left py-2 pr-4 font-medium text-text-primary">Header</th>
               <th className="text-left py-2 pr-4 font-medium text-text-primary">Value</th>
               <th className="text-left py-2 font-medium text-text-primary">Description</th>
             </tr>
           </thead>
           <tbody>
-            <tr className="border-b border-[rgba(0,0,0,0.04)]">
+            <tr className="border-b border-[rgba(255,255,255,0.08)]">
               <td className="py-2 pr-4 text-text-secondary font-mono text-[13px]">Authorization</td>
               <td className="py-2 pr-4 text-text-secondary font-mono text-[13px]">Bearer &lt;api_key&gt;</td>
               <td className="py-2 text-text-secondary">API key or JWT token</td>
             </tr>
-            <tr className="border-b border-[rgba(0,0,0,0.04)]">
+            <tr className="border-b border-[rgba(255,255,255,0.08)]">
               <td className="py-2 pr-4 text-text-secondary font-mono text-[13px]">Content-Type</td>
               <td className="py-2 pr-4 text-text-secondary font-mono text-[13px]">application/json</td>
               <td className="py-2 text-text-secondary">Request body format</td>
@@ -471,7 +471,7 @@ export default function ApiReferencePage() {
                   <p className="text-[13px] font-medium text-text-primary mb-1.5">Request Body</p>
                   <table className="w-full text-[13px]">
                     <thead>
-                      <tr className="border-b border-[rgba(0,0,0,0.06)]">
+                      <tr className="border-b border-[rgba(255,255,255,0.1)]">
                         <th className="text-left py-1 pr-3 font-medium text-text-tertiary">Field</th>
                         <th className="text-left py-1 pr-3 font-medium text-text-tertiary">Type</th>
                         <th className="text-left py-1 pr-3 font-medium text-text-tertiary">Required</th>
@@ -480,7 +480,7 @@ export default function ApiReferencePage() {
                     </thead>
                     <tbody>
                       {ep.body.map((param) => (
-                        <tr key={param.field} className="border-b border-[rgba(0,0,0,0.03)]">
+                        <tr key={param.field} className="border-b border-[rgba(255,255,255,0.06)]">
                           <td className="py-1 pr-3 font-mono text-text-primary">{param.field}</td>
                           <td className="py-1 pr-3 text-text-secondary">{param.type}</td>
                           <td className="py-1 pr-3">{param.required ? <span className="text-danger">required</span> : <span className="text-text-tertiary">optional</span>}</td>
@@ -496,7 +496,7 @@ export default function ApiReferencePage() {
                   <p className="text-[13px] font-medium text-text-primary mb-1.5">Query Parameters</p>
                   <table className="w-full text-[13px]">
                     <thead>
-                      <tr className="border-b border-[rgba(0,0,0,0.06)]">
+                      <tr className="border-b border-[rgba(255,255,255,0.1)]">
                         <th className="text-left py-1 pr-3 font-medium text-text-tertiary">Field</th>
                         <th className="text-left py-1 pr-3 font-medium text-text-tertiary">Type</th>
                         <th className="text-left py-1 font-medium text-text-tertiary">Description</th>
@@ -504,7 +504,7 @@ export default function ApiReferencePage() {
                     </thead>
                     <tbody>
                       {ep.query.map((param) => (
-                        <tr key={param.field} className="border-b border-[rgba(0,0,0,0.03)]">
+                        <tr key={param.field} className="border-b border-[rgba(255,255,255,0.06)]">
                           <td className="py-1 pr-3 font-mono text-text-primary">{param.field}</td>
                           <td className="py-1 pr-3 text-text-secondary">{param.type}</td>
                           <td className="py-1 text-text-secondary">{param.description}</td>
@@ -542,37 +542,37 @@ export default function ApiReferencePage() {
         <p>The API uses conventional HTTP response codes:</p>
         <table className="w-full text-[14px]">
           <thead>
-            <tr className="border-b border-[rgba(0,0,0,0.06)]">
+            <tr className="border-b border-[rgba(255,255,255,0.1)]">
               <th className="text-left py-2 pr-4 font-medium text-text-primary">Code</th>
               <th className="text-left py-2 font-medium text-text-primary">Description</th>
             </tr>
           </thead>
           <tbody>
-            <tr className="border-b border-[rgba(0,0,0,0.04)]">
+            <tr className="border-b border-[rgba(255,255,255,0.08)]">
               <td className="py-2 pr-4 font-mono text-[13px] text-success">200</td>
               <td className="py-2 text-text-secondary">Success</td>
             </tr>
-            <tr className="border-b border-[rgba(0,0,0,0.04)]">
+            <tr className="border-b border-[rgba(255,255,255,0.08)]">
               <td className="py-2 pr-4 font-mono text-[13px] text-text-primary">400</td>
               <td className="py-2 text-text-secondary">Bad Request — invalid payload</td>
             </tr>
-            <tr className="border-b border-[rgba(0,0,0,0.04)]">
+            <tr className="border-b border-[rgba(255,255,255,0.08)]">
               <td className="py-2 pr-4 font-mono text-[13px] text-text-primary">401</td>
               <td className="py-2 text-text-secondary">Unauthorized — missing or invalid API key</td>
             </tr>
-            <tr className="border-b border-[rgba(0,0,0,0.04)]">
+            <tr className="border-b border-[rgba(255,255,255,0.08)]">
               <td className="py-2 pr-4 font-mono text-[13px] text-text-primary">403</td>
               <td className="py-2 text-text-secondary">Forbidden — insufficient permissions</td>
             </tr>
-            <tr className="border-b border-[rgba(0,0,0,0.04)]">
+            <tr className="border-b border-[rgba(255,255,255,0.08)]">
               <td className="py-2 pr-4 font-mono text-[13px] text-text-primary">404</td>
               <td className="py-2 text-text-secondary">Not Found</td>
             </tr>
-            <tr className="border-b border-[rgba(0,0,0,0.04)]">
+            <tr className="border-b border-[rgba(255,255,255,0.08)]">
               <td className="py-2 pr-4 font-mono text-[13px] text-text-primary">409</td>
               <td className="py-2 text-text-secondary">Conflict — duplicate idempotency key</td>
             </tr>
-            <tr className="border-b border-[rgba(0,0,0,0.04)]">
+            <tr className="border-b border-[rgba(255,255,255,0.08)]">
               <td className="py-2 pr-4 font-mono text-[13px] text-text-primary">429</td>
               <td className="py-2 text-text-secondary">Too Many Requests — rate limit exceeded</td>
             </tr>

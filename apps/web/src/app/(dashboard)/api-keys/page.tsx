@@ -274,7 +274,7 @@ export default function ApiKeysPage() {
                       "px-3 py-1.5 rounded-lg text-[13px] font-medium transition-colors border",
                       keyScopes.includes(scope.id)
                         ? "bg-accent text-white border-accent"
-                        : "bg-transparent text-text-secondary border-[rgba(0,0,0,0.1)] hover:border-accent hover:text-accent",
+                        : "bg-transparent text-text-secondary border-[rgba(255,255,255,0.16)] hover:border-accent hover:text-accent",
                     )}
                   >
                     {scope.label}
@@ -306,7 +306,7 @@ export default function ApiKeysPage() {
                 <p className="text-[13px] text-text-secondary mt-0.5">You won&apos;t be able to see it again after closing this dialog.</p>
               </div>
             </div>
-            <div className="flex items-center gap-2 bg-[rgba(0,0,0,0.03)] p-3 rounded-lg">
+            <div className="flex items-center gap-2 bg-[rgba(255,255,255,0.05)] p-3 rounded-lg">
               <code className="flex-1 text-[14px] font-mono text-text-primary break-all">
                 {createdKey}
               </code>

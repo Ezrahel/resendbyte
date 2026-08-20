@@ -24,7 +24,7 @@ const stats = [
 
 export function Reliability() {
   return (
-    <section id="reliability" className="border-y border-black/[0.05] bg-white/50 py-24 sm:py-28">
+    <section id="reliability" className="border-y border-white/[0.08] bg-white/[0.02] py-24 sm:py-28">
       <div className="mx-auto max-w-6xl px-5">
         <Reveal className="text-center">
           <p className="text-[13px] font-medium uppercase tracking-[0.14em] text-brand-600">Reliability</p>

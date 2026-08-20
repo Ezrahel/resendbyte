@@ -55,7 +55,7 @@ function FeatureCard({ feature }: { feature: Feature }) {
   const Icon = feature.icon;
   return (
     <div
-      className={`glass group relative flex flex-col overflow-hidden rounded-2xl p-6 transition-all duration-300 hover:-translate-y-0.5 hover:border-black/[0.12] hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] ${feature.span ?? ""}`}
+      className={`glass group relative flex flex-col overflow-hidden rounded-2xl p-6 transition-all duration-300 hover:-translate-y-0.5 hover:border-white/[0.2] hover:shadow-[0_12px_40px_rgba(255,255,255,0.06)] ${feature.span ?? ""}`}
     >
       <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent-glass text-text-primary transition-colors group-hover:bg-accent group-hover:text-white">
         <Icon className="h-5 w-5" strokeWidth={1.75} />

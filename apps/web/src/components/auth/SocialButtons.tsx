@@ -70,7 +70,7 @@ export function SocialButtons({ className }: SocialButtonsProps) {
           type="button"
           disabled={pending !== null}
           onClick={() => handleSocial(provider)}
-          className="inline-flex items-center justify-center gap-2.5 rounded-[10px] border border-black/[0.1] bg-white px-4 py-2.5 text-[14px] font-medium text-text-primary shadow-sm transition-all duration-200 hover:bg-[#fafafa] hover:shadow disabled:opacity-60"
+          className="inline-flex items-center justify-center gap-2.5 rounded-[10px] border border-white/[0.16] bg-white/[0.06] px-4 py-2.5 text-[14px] font-medium text-text-primary shadow-sm transition-all duration-200 hover:bg-white/[0.12] hover:shadow disabled:opacity-60"
         >
           {pending === provider ? <Loader2 className="h-[18px] w-[18px] animate-spin text-text-tertiary" /> : icon}
           {label}

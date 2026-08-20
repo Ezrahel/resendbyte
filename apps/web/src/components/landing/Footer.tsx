@@ -41,7 +41,7 @@ const columns = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-black/[0.06] bg-white/60">
+    <footer className="border-t border-white/[0.1] bg-white/[0.02]">
       <div className="mx-auto max-w-6xl px-5 py-16">
         <div className="grid gap-10 lg:grid-cols-[1.4fr_2fr]">
           <div>
@@ -50,7 +50,7 @@ export function Footer() {
               The transactional email API for developers and ops teams. Built for deliverability,
               observability, and scale.
             </p>
-            <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-black/[0.06] bg-white px-3.5 py-1.5 shadow-sm">
+            <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-white/[0.1] bg-white/[0.06] px-3.5 py-1.5 shadow-sm">
               <span className="h-2 w-2 rounded-full bg-success animate-pulse-soft" />
               <span className="text-[12px] font-medium text-text-secondary">All systems operational</span>
             </div>
@@ -74,7 +74,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-black/[0.05] pt-6 sm:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/[0.08] pt-6 sm:flex-row">
           <p className="text-[13px] text-text-tertiary">© {new Date().getFullYear()} ResendByte, Inc.</p>
           <div className="flex items-center gap-5 text-[13px] text-text-tertiary">
             <a href="#" className="no-underline hover:text-text-primary transition-colors">Privacy</a>

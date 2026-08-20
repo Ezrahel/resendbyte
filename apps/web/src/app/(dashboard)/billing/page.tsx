@@ -143,7 +143,7 @@ export default function BillingPage() {
   if (error) {
     return (
       <PageShell title="Billing">
-        <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-red-700">{error}</div>
+        <div className="bg-danger/10 border border-danger/30 rounded-lg p-4 text-danger">{error}</div>
       </PageShell>
     );
   }
@@ -155,13 +155,13 @@ export default function BillingPage() {
     <PageShell title="Billing">
       <div className="space-y-6 max-w-3xl">
         {subscription?.status === "past_due" && (
-          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 text-yellow-800 flex items-center gap-2">
+          <div className="bg-warning/15 border border-warning/30 rounded-lg p-4 text-warning flex items-center gap-2">
             <AlertTriangle className="w-5 h-5" />
             <span>Your account is past due. Please pay outstanding invoices to avoid suspension.</span>
           </div>
         )}
 
-        <div className="bg-white border rounded-lg p-6">
+        <div className="glass border border-white/[0.1] rounded-lg p-6">
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-lg font-semibold flex items-center gap-2">
               <CreditCard className="w-5 h-5" />
@@ -176,7 +176,7 @@ export default function BillingPage() {
             </Badge>
           </div>
           {currentPlan && (
-            <p className="text-sm text-gray-500 mb-4">{currentPlan.description}</p>
+            <p className="text-sm text-text-secondary mb-4">{currentPlan.description}</p>
           )}
           {usage && (
             <div>
@@ -184,31 +184,31 @@ export default function BillingPage() {
                 <span>{usage.sentThisMonth.toLocaleString()} sent this month</span>
                 <span>{usage.limit.toLocaleString()} limit</span>
               </div>
-              <div className="w-full bg-gray-100 rounded-full h-2.5">
+              <div className="w-full bg-white/[0.08] rounded-full h-2.5">
                 <div
                   className={`h-2.5 rounded-full transition-all ${usagePercent > 90 ? "bg-red-500" : usagePercent > 75 ? "bg-yellow-500" : "bg-blue-500"}`}
                   style={{ width: `${usagePercent}%` }}
                 />
               </div>
-              <p className="text-xs text-gray-400 mt-1">{usagePercent}% used</p>
+              <p className="text-xs text-text-tertiary mt-1">{usagePercent}% used</p>
             </div>
           )}
         </div>
 
         {subscription && (
-          <div className="bg-white border rounded-lg p-6">
+          <div className="glass border border-white/[0.1] rounded-lg p-6">
             <h3 className="font-semibold mb-3">Overage</h3>
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm">Pay-as-you-go overage</span>
               <button
                 onClick={() => handleToggleOverage(!usage?.overageEnabled)}
-                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${usage?.overageEnabled ? "bg-blue-600" : "bg-gray-300"}`}
+                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${usage?.overageEnabled ? "bg-blue-600" : "bg-white/20"}`}
               >
                 <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${usage?.overageEnabled ? "translate-x-6" : "translate-x-1"}`} />
               </button>
             </div>
             {usage?.overageEnabled && (
-              <div className="text-sm text-gray-500">
+              <div className="text-sm text-text-secondary">
                 <p>Overage balance: {subscription.overageBalanceCents} emails (at {currentPlan?.overage_rate_cents || 0}c each)</p>
                 {subscription.overageBalanceCents > 0 && (
                   <Button variant="secondary" size="sm" className="mt-2" onClick={handleGenerateInvoice} disabled={invoiceLoading}>
@@ -220,19 +220,19 @@ export default function BillingPage() {
           </div>
         )}
 
-        <div className="bg-white border rounded-lg p-6">
+        <div className="glass border border-white/[0.1] rounded-lg p-6">
           <h3 className="font-semibold mb-4">Available Plans</h3>
           <div className="grid gap-4 md:grid-cols-3">
             {plans.map((plan) => {
               const isCurrent = plan.slug === (usage?.planSlug || "free");
               return (
-                <div key={plan.id} className={`border rounded-lg p-4 ${isCurrent ? "ring-2 ring-blue-500 border-blue-500" : ""}`}>
+                <div key={plan.id} className={`border border-white/[0.1] rounded-lg p-4 ${isCurrent ? "ring-2 ring-brand-500 border-brand-500" : ""}`}>
                   <div className="flex items-center justify-between mb-2">
                     <h4 className="font-semibold">{plan.name}</h4>
                     {isCurrent && <Badge variant="info">Current</Badge>}
                   </div>
                   <p className="text-2xl font-bold mb-1">${(plan.price_cents / 100).toFixed(2)}</p>
-                  <p className="text-sm text-gray-500 mb-3">/month</p>
+                  <p className="text-sm text-text-secondary mb-3">/month</p>
                   <ul className="text-sm space-y-1 mb-4">
                     <li>{plan.monthly_email_limit.toLocaleString()} emails/month</li>
                     {plan.overage_rate_cents > 0 && <li>{plan.overage_rate_cents}c per extra email</li>}
@@ -248,17 +248,17 @@ export default function BillingPage() {
           </div>
         </div>
 
-        <div className="bg-white border rounded-lg p-6">
+        <div className="glass border border-white/[0.1] rounded-lg p-6">
           <h3 className="font-semibold mb-4">Invoices</h3>
           {invoices.length === 0 ? (
-            <p className="text-sm text-gray-500">No invoices yet</p>
+            <p className="text-sm text-text-secondary">No invoices yet</p>
           ) : (
             <div className="space-y-2">
               {invoices.map((inv) => (
                 <div key={inv.id} className="flex items-center justify-between border-b pb-2 text-sm">
                   <div>
                     <span className="font-medium">{inv.description || "Invoice"}</span>
-                    <span className="text-gray-500 ml-2">
+                    <span className="text-text-secondary ml-2">
                       {(inv.amount_cents / 100).toFixed(2)} {inv.currency}
                     </span>
                     <Badge variant={inv.status === "paid" ? "success" : inv.status === "pending" ? "warning" : "danger"} className="ml-2">
@@ -266,7 +266,7 @@ export default function BillingPage() {
                     </Badge>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-gray-400 text-xs">{new Date(inv.created_at).toLocaleDateString()}</span>
+                    <span className="text-text-tertiary text-xs">{new Date(inv.created_at).toLocaleDateString()}</span>
                     {inv.status === "pending" && (
                       <Button variant="secondary" size="sm" onClick={() => handlePayInvoice(inv.id)}>
                         Pay Now
@@ -289,13 +289,13 @@ export default function BillingPage() {
                 key={plan.id}
                 onClick={() => handleChangePlan(plan.slug)}
                 disabled={isCurrent}
-                className={`w-full text-left p-4 rounded-lg border transition-colors ${isCurrent ? "bg-gray-50 border-gray-200 cursor-not-allowed" : "hover:border-blue-300 hover:bg-blue-50"}`}
+                className={`w-full text-left p-4 rounded-lg border transition-colors ${isCurrent ? "bg-white/[0.06] border-white/[0.15] cursor-not-allowed" : "hover:border-brand-400 hover:bg-white/[0.04]"}`}
               >
                 <div className="flex items-center justify-between">
                   <span className="font-semibold">{plan.name}</span>
                   <span className="text-lg font-bold">${(plan.price_cents / 100).toFixed(2)}/mo</span>
                 </div>
-                <p className="text-sm text-gray-500 mt-1">{plan.monthly_email_limit.toLocaleString()} emails/month</p>
+                <p className="text-sm text-text-secondary mt-1">{plan.monthly_email_limit.toLocaleString()} emails/month</p>
               </button>
             );
           })}

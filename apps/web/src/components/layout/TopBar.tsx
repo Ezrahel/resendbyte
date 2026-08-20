@@ -30,7 +30,7 @@ export function TopBar() {
   }, []);
 
   return (
-    <header className="glass-sm sticky top-0 z-30 flex items-center justify-between h-14 px-6 border-b border-[rgba(0,0,0,0.06)]">
+    <header className="glass-sm sticky top-0 z-30 flex items-center justify-between h-14 px-6 border-b border-[rgba(255,255,255,0.1)]">
       <nav className="flex items-center gap-1.5 text-[15px]">
         {segments.map((seg, i) => (
           <span key={i} className="flex items-center gap-1.5">
@@ -61,7 +61,7 @@ export function TopBar() {
         {menuOpen && (
           <div className="absolute right-0 top-full mt-2 w-44 glass-sm py-1 z-50">
             {user?.email && (
-              <div className="px-3 py-2 text-[13px] text-text-tertiary border-b border-[rgba(0,0,0,0.04)]">
+              <div className="px-3 py-2 text-[13px] text-text-tertiary border-b border-[rgba(255,255,255,0.08)]">
                 {user.email}
               </div>
             )}

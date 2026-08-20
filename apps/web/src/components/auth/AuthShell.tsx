@@ -69,7 +69,7 @@ function ShowcasePanel() {
 
 function AuthShell({ children }: { children: React.ReactNode }) {
   return (
-    <main className="min-h-screen bg-[#f5f5f7] lg:flex">
+    <main className="min-h-screen bg-bg lg:flex">
       <ShowcasePanel />
       <section className="flex min-h-screen flex-1 flex-col">
         <div className="flex items-center justify-between px-6 pt-8 lg:hidden">

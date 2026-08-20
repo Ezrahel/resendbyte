@@ -87,7 +87,7 @@ export default function WebhookDeliveriesPage() {
       {loading ? (
         <div className="glass rounded-[16px] overflow-hidden">
           {Array.from({ length: 5 }).map((_, i) => (
-            <div key={i} className="flex items-center gap-4 px-5 py-4 border-b border-[rgba(0,0,0,0.04)]">
+            <div key={i} className="flex items-center gap-4 px-5 py-4 border-b border-[rgba(255,255,255,0.08)]">
               <Skeleton className="h-4 w-32" />
               <Skeleton className="h-5 w-20 rounded-full" />
               <Skeleton className="h-4 w-24" />
@@ -105,7 +105,7 @@ export default function WebhookDeliveriesPage() {
       ) : (
         <>
           <div className="glass rounded-[16px] overflow-hidden animate-fade-in">
-            <div className="grid grid-cols-[1fr_auto_auto_auto_auto_auto] gap-4 px-5 py-3 text-[13px] font-medium text-text-secondary border-b border-[rgba(0,0,0,0.04)]">
+            <div className="grid grid-cols-[1fr_auto_auto_auto_auto_auto] gap-4 px-5 py-3 text-[13px] font-medium text-text-secondary border-b border-[rgba(255,255,255,0.08)]">
               <span>Event</span>
               <span>Status</span>
               <span>Attempts</span>
@@ -119,7 +119,7 @@ export default function WebhookDeliveriesPage() {
               const status = isDelivered ? "delivered" : isFailed ? "failed" : "pending";
               const sv = STATUS_VARIANTS[status] || "neutral";
               return (
-                <div key={d.id} className="grid grid-cols-[1fr_auto_auto_auto_auto_auto] gap-4 px-5 py-3.5 border-b border-[rgba(0,0,0,0.04)] last:border-0 hover:bg-accent-glass transition-colors items-center text-[15px]">
+                <div key={d.id} className="grid grid-cols-[1fr_auto_auto_auto_auto_auto] gap-4 px-5 py-3.5 border-b border-[rgba(255,255,255,0.08)] last:border-0 hover:bg-accent-glass transition-colors items-center text-[15px]">
                   <span className="text-text-primary truncate">
                     <Badge variant="info">{d.event_type}</Badge>
                   </span>

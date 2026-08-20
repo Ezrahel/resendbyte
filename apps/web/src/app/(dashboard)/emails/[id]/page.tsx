@@ -231,7 +231,7 @@ export default function EmailDetailPage() {
             {activeTab === "html" ? (
               <iframe
                 srcDoc={data.html_body}
-                className="w-full h-[500px] rounded-lg border border-[rgba(0,0,0,0.06)] bg-white"
+                className="w-full h-[500px] rounded-lg border border-[rgba(255,255,255,0.1)] bg-white"
                 title="HTML Preview"
                 sandbox=""
               />

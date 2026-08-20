@@ -24,7 +24,7 @@ const steps = [
 
 export function Steps() {
   return (
-    <section className="border-y border-black/[0.05] bg-white/50 py-24 sm:py-28">
+    <section className="border-y border-white/[0.08] bg-white/[0.02] py-24 sm:py-28">
       <div className="mx-auto max-w-6xl px-5">
         <Reveal className="text-center">
           <p className="text-[13px] font-medium uppercase tracking-[0.14em] text-brand-600">How it works</p>
@@ -34,13 +34,13 @@ export function Steps() {
         </Reveal>
 
         <div className="relative mt-14 grid gap-10 lg:grid-cols-3 lg:gap-8">
-          <div className="absolute left-0 right-0 top-6 hidden h-px bg-gradient-to-r from-transparent via-black/10 to-transparent lg:block" />
+          <div className="absolute left-0 right-0 top-6 hidden h-px bg-gradient-to-r from-transparent via-white/10 to-transparent lg:block" />
           {steps.map((step, i) => {
             const Icon = step.icon;
             return (
               <Reveal key={step.number} delay={i * 100} className="relative">
                 <div className="flex flex-col items-center text-center">
-                  <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full border border-black/[0.08] bg-white text-text-primary shadow-sm">
+                  <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full border border-white/[0.14] bg-white/[0.06] text-text-primary shadow-sm">
                     <Icon className="h-5 w-5" strokeWidth={1.75} />
                   </div>
                   <div className="mt-4 text-[12px] font-semibold uppercase tracking-[0.14em] text-text-tertiary">

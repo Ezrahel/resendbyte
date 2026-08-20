@@ -39,14 +39,14 @@ export default function WebhooksPage() {
       <Section title="Event Types">
         <table className="w-full text-[14px]">
           <thead>
-            <tr className="border-b border-[rgba(0,0,0,0.06)]">
+            <tr className="border-b border-[rgba(255,255,255,0.1)]">
               <th className="text-left py-2 pr-4 font-medium text-text-primary">Event</th>
               <th className="text-left py-2 font-medium text-text-primary">Description</th>
             </tr>
           </thead>
           <tbody>
             {events.map((e) => (
-              <tr key={e.event} className="border-b border-[rgba(0,0,0,0.04)]">
+              <tr key={e.event} className="border-b border-[rgba(255,255,255,0.08)]">
                 <td className="py-2 pr-4 font-mono text-[13px]">{e.event}</td>
                 <td className="py-2 text-text-secondary">{e.description}</td>
               </tr>
@@ -112,33 +112,33 @@ function verifyWebhookSignature(
         </p>
         <table className="w-full text-[14px]">
           <thead>
-            <tr className="border-b border-[rgba(0,0,0,0.06)]">
+            <tr className="border-b border-[rgba(255,255,255,0.1)]">
               <th className="text-left py-2 pr-4 font-medium text-text-primary">Attempt</th>
               <th className="text-left py-2 font-medium text-text-primary">Wait Time</th>
             </tr>
           </thead>
           <tbody>
-            <tr className="border-b border-[rgba(0,0,0,0.04)]">
+            <tr className="border-b border-[rgba(255,255,255,0.08)]">
               <td className="py-2 pr-4 font-mono text-[13px]">1</td>
               <td className="py-2 text-text-secondary">10 seconds</td>
             </tr>
-            <tr className="border-b border-[rgba(0,0,0,0.04)]">
+            <tr className="border-b border-[rgba(255,255,255,0.08)]">
               <td className="py-2 pr-4 font-mono text-[13px]">2</td>
               <td className="py-2 text-text-secondary">30 seconds</td>
             </tr>
-            <tr className="border-b border-[rgba(0,0,0,0.04)]">
+            <tr className="border-b border-[rgba(255,255,255,0.08)]">
               <td className="py-2 pr-4 font-mono text-[13px]">3</td>
               <td className="py-2 text-text-secondary">1 minute</td>
             </tr>
-            <tr className="border-b border-[rgba(0,0,0,0.04)]">
+            <tr className="border-b border-[rgba(255,255,255,0.08)]">
               <td className="py-2 pr-4 font-mono text-[13px]">4</td>
               <td className="py-2 text-text-secondary">2 minutes</td>
             </tr>
-            <tr className="border-b border-[rgba(0,0,0,0.04)]">
+            <tr className="border-b border-[rgba(255,255,255,0.08)]">
               <td className="py-2 pr-4 font-mono text-[13px]">5</td>
               <td className="py-2 text-text-secondary">5 minutes</td>
             </tr>
-            <tr className="border-b border-[rgba(0,0,0,0.04)]">
+            <tr className="border-b border-[rgba(255,255,255,0.08)]">
               <td className="py-2 pr-4 font-mono text-[13px]">6-10</td>
               <td className="py-2 text-text-secondary">1 hour</td>
             </tr>

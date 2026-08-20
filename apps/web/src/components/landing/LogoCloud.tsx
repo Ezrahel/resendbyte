@@ -4,7 +4,7 @@ const logos = ["Acme", "Lumen", "Northwind", "Vertex", "Nimbus", "Harbor", "Fath
 
 export function LogoCloud() {
   return (
-    <section className="border-y border-black/[0.05] bg-white/50 py-12">
+    <section className="border-y border-white/[0.08] bg-white/[0.02] py-12">
       <div className="mx-auto max-w-6xl px-5">
         <Reveal>
           <p className="text-center text-[13px] font-medium uppercase tracking-[0.14em] text-text-tertiary">

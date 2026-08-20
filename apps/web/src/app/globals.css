@@ -1,25 +1,25 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #f5f5f7;
-  --color-surface: rgba(255, 255, 255, 0.72);
-  --color-surface-border: rgba(255, 255, 255, 0.4);
+  --color-bg: #0a0a0a;
+  --color-surface: rgba(22, 22, 26, 0.82);
+  --color-surface-border: rgba(255, 255, 255, 0.08);
   --color-accent: #333;
   --color-accent-hover: #1a1a1a;
-  --color-accent-glass: rgba(51, 51, 51, 0.08);
-  --color-text-primary: #1d1d1f;
-  --color-text-secondary: #6e6e73;
+  --color-accent-glass: rgba(255, 255, 255, 0.08);
+  --color-text-primary: #f5f5f7;
+  --color-text-secondary: #a1a1a6;
   --color-text-tertiary: #86868b;
   --color-success: #30d158;
   --color-warning: #ff9f0a;
   --color-danger: #ff453a;
-  --color-chart-1: #333;
-  --color-chart-2: #86868b;
+  --color-chart-1: #f5f5f7;
+  --color-chart-2: #a1a1a6;
   --color-chart-3: #30d158;
   --color-chart-4: #ff453a;
   --color-brand-500: #6366f1;
-  --color-brand-600: #4f46e5;
-  --color-brand-400: #818cf8;
+  --color-brand-600: #818cf8;
+  --color-brand-400: #a5b4fc;
   --color-violet-500: #8b5cf6;
   --color-bg-dark: #0a0a0a;
   --color-surface-dark: #131316;
@@ -75,15 +75,15 @@ body {
 }
 
 @utility input-glass {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 10px;
   transition: all 0.2s ease;
   &:focus {
     border-color: var(--color-accent);
-    box-shadow: 0 0 0 3px rgba(51, 51, 51, 0.15);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
     outline: none;
   }
 }

@@ -59,11 +59,11 @@ export default function LoginPage() {
         <SocialButtons className="mt-7" />
 
         <div className="my-6 flex items-center gap-3">
-          <span className="h-px flex-1 bg-black/[0.08]" />
+          <span className="h-px flex-1 bg-white/[0.15]" />
           <span className="text-[12px] font-medium uppercase tracking-wider text-text-tertiary">
             or continue with email
           </span>
-          <span className="h-px flex-1 bg-black/[0.08]" />
+          <span className="h-px flex-1 bg-white/[0.15]" />
         </div>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-4" noValidate>

@@ -36,24 +36,24 @@ export default function EmailsPage() {
       <Section title="Required Fields">
         <table className="w-full text-[14px]">
           <thead>
-            <tr className="border-b border-[rgba(0,0,0,0.06)]">
+            <tr className="border-b border-[rgba(255,255,255,0.1)]">
               <th className="text-left py-2 pr-4 font-medium text-text-primary">Field</th>
               <th className="text-left py-2 pr-4 font-medium text-text-primary">Type</th>
               <th className="text-left py-2 font-medium text-text-primary">Description</th>
             </tr>
           </thead>
           <tbody>
-            <tr className="border-b border-[rgba(0,0,0,0.04)]">
+            <tr className="border-b border-[rgba(255,255,255,0.08)]">
               <td className="py-2 pr-4 font-mono text-[13px]">from</td>
               <td className="py-2 pr-4 text-text-secondary">string</td>
               <td className="py-2 text-text-secondary">Sender email address. Must be from a verified domain.</td>
             </tr>
-            <tr className="border-b border-[rgba(0,0,0,0.04)]">
+            <tr className="border-b border-[rgba(255,255,255,0.08)]">
               <td className="py-2 pr-4 font-mono text-[13px]">to</td>
               <td className="py-2 pr-4 text-text-secondary">string | string[]</td>
               <td className="py-2 text-text-secondary">Single recipient or array of recipients.</td>
             </tr>
-            <tr className="border-b border-[rgba(0,0,0,0.04)]">
+            <tr className="border-b border-[rgba(255,255,255,0.08)]">
               <td className="py-2 pr-4 font-mono text-[13px]">subject</td>
               <td className="py-2 pr-4 text-text-secondary">string</td>
               <td className="py-2 text-text-secondary">Email subject line.</td>
@@ -70,7 +70,7 @@ export default function EmailsPage() {
       <Section title="Optional Fields">
         <table className="w-full text-[14px]">
           <thead>
-            <tr className="border-b border-[rgba(0,0,0,0.06)]">
+            <tr className="border-b border-[rgba(255,255,255,0.1)]">
               <th className="text-left py-2 pr-4 font-medium text-text-primary">Field</th>
               <th className="text-left py-2 pr-4 font-medium text-text-primary">Type</th>
               <th className="text-left py-2 font-medium text-text-primary">Description</th>
@@ -78,7 +78,7 @@ export default function EmailsPage() {
           </thead>
           <tbody>
             {optionalFields.map((f) => (
-              <tr key={f.field} className="border-b border-[rgba(0,0,0,0.04)]">
+              <tr key={f.field} className="border-b border-[rgba(255,255,255,0.08)]">
                 <td className="py-2 pr-4 font-mono text-[13px]">{f.field}</td>
                 <td className="py-2 pr-4 text-text-secondary">{f.type}</td>
                 <td className="py-2 text-text-secondary">{f.description}</td>
@@ -178,14 +178,14 @@ export default function EmailsPage() {
       <Section title="Delivery Statuses">
         <table className="w-full text-[14px]">
           <thead>
-            <tr className="border-b border-[rgba(0,0,0,0.06)]">
+            <tr className="border-b border-[rgba(255,255,255,0.1)]">
               <th className="text-left py-2 pr-4 font-medium text-text-primary">Status</th>
               <th className="text-left py-2 font-medium text-text-primary">Description</th>
             </tr>
           </thead>
           <tbody>
             {statuses.map((s) => (
-              <tr key={s.status} className="border-b border-[rgba(0,0,0,0.04)]">
+              <tr key={s.status} className="border-b border-[rgba(255,255,255,0.08)]">
                 <td className="py-2 pr-4 font-mono text-[13px]">{s.status}</td>
                 <td className="py-2 text-text-secondary">{s.description}</td>
               </tr>

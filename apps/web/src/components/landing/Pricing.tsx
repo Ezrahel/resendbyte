@@ -89,7 +89,7 @@ export function Pricing() {
               aria-checked={annual}
               aria-label="Toggle annual billing"
               onClick={() => setAnnual((a) => !a)}
-              className="relative h-7 w-12 rounded-full bg-accent transition-colors"
+              className="relative h-7 w-12 rounded-full bg-white/20 transition-colors"
             >
               <span
                 className={clsx(

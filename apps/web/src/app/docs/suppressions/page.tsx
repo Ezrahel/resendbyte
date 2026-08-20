@@ -57,14 +57,14 @@ export default function SuppressionsPage() {
       <Section title="Suppression Reasons">
         <table className="w-full text-[14px]">
           <thead>
-            <tr className="border-b border-[rgba(0,0,0,0.06)]">
+            <tr className="border-b border-[rgba(255,255,255,0.1)]">
               <th className="text-left py-2 pr-4 font-medium text-text-primary">Reason</th>
               <th className="text-left py-2 font-medium text-text-primary">Description</th>
             </tr>
           </thead>
           <tbody>
             {reasons.map((r) => (
-              <tr key={r.reason} className="border-b border-[rgba(0,0,0,0.04)]">
+              <tr key={r.reason} className="border-b border-[rgba(255,255,255,0.08)]">
                 <td className="py-2 pr-4 font-mono text-[13px]">{r.reason}</td>
                 <td className="py-2 text-text-secondary">{r.description}</td>
               </tr>

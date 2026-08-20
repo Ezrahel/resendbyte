@@ -26,7 +26,7 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="border-y border-black/[0.05] bg-white/50 py-24 sm:py-28">
+    <section className="border-y border-white/[0.08] bg-white/[0.02] py-24 sm:py-28">
       <div className="mx-auto max-w-6xl px-5">
         <Reveal className="text-center">
           <p className="text-[13px] font-medium uppercase tracking-[0.14em] text-brand-600">Loved by builders</p>
@@ -42,7 +42,7 @@ export function Testimonials() {
                 <blockquote className="flex-1 text-[15px] leading-relaxed text-text-primary">
                   &ldquo;{t.quote}&rdquo;
                 </blockquote>
-                <figcaption className="mt-5 flex items-center gap-3 border-t border-black/[0.05] pt-4">
+                <figcaption className="mt-5 flex items-center gap-3 border-t border-white/[0.08] pt-4">
                   <span className="flex h-10 w-10 items-center justify-center rounded-full bg-accent text-[13px] font-semibold text-white">
                     {t.initials}
                   </span>

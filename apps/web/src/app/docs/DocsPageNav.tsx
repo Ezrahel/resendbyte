@@ -25,7 +25,7 @@ export function DocsPageNav({ current }: DocsPageNavProps) {
   const next = idx >= 0 && idx < docOrder.length - 1 ? docOrder[idx + 1] : null;
 
   return (
-    <nav className="flex items-stretch gap-3 mt-12 pt-6 border-t border-[rgba(0,0,0,0.06)]">
+    <nav className="flex items-stretch gap-3 mt-12 pt-6 border-t border-[rgba(255,255,255,0.1)]">
       {prev ? (
         <Link
           href={prev.href}

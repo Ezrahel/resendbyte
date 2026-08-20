@@ -51,7 +51,7 @@ export function ProductShowcase() {
           <div className="relative">
             <div className="absolute -inset-3 rounded-[28px] bg-gradient-to-br from-brand-500/10 to-violet-500/10" />
             <div className="glass-lg relative overflow-hidden p-5">
-              <div className="flex items-center justify-between border-b border-black/[0.06] pb-4">
+              <div className="flex items-center justify-between border-b border-white/[0.1] pb-4">
                 <div className="flex items-center gap-2">
                   <span className="h-2 w-2 rounded-full bg-success animate-pulse-soft" />
                   <span className="text-[13px] font-semibold text-text-primary">Overview</span>
@@ -63,7 +63,7 @@ export function ProductShowcase() {
 
               <div className="mt-5 grid grid-cols-3 gap-3">
                 {stats.map((s) => (
-                  <div key={s.label} className="rounded-xl border border-black/[0.06] bg-white/60 p-3">
+                  <div key={s.label} className="rounded-xl border border-white/[0.1] bg-white/[0.05] p-3">
                     <div className="text-[12px] text-text-tertiary">{s.label}</div>
                     <div className="mt-1 text-[18px] font-semibold tracking-tight text-text-primary">
                       {s.value}
@@ -84,13 +84,13 @@ export function ProductShowcase() {
                 </div>
                 <div className="mt-2 flex h-28 items-end gap-2">
                   {[34, 48, 40, 64, 52, 72, 58].map((h, i) => (
-                    <div key={i} className="flex-1 rounded-t-md border border-black/[0.04] bg-text-primary transition-all hover:opacity-90" style={{ height: `${h}%` }} />
+                    <div key={i} className="flex-1 rounded-t-md border border-white/[0.08] bg-text-primary transition-all hover:opacity-90" style={{ height: `${h}%` }} />
                   ))}
                 </div>
               </div>
             </div>
 
-            <div className="animate-float absolute -right-4 -top-4 flex items-center gap-2 rounded-full border border-black/[0.06] bg-white px-3.5 py-1.5 shadow-lg">
+            <div className="animate-float absolute -right-4 -top-4 flex items-center gap-2 rounded-full border border-white/[0.1] bg-white/[0.06] px-3.5 py-1.5 shadow-lg">
               <span className="h-2 w-2 rounded-full bg-success" />
               <span className="text-[12px] font-semibold text-text-primary">All systems operational</span>
             </div>

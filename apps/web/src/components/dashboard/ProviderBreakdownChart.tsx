@@ -2,7 +2,7 @@ import {
   PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer,
 } from "recharts";
 
-const CHART_COLORS = ["#333", "#86868b", "#30d158", "#ff453a"];
+const CHART_COLORS = ["#6366f1", "#a1a1a6", "#30d158", "#ff453a"];
 
 interface ProviderData {
   provider_type: string;

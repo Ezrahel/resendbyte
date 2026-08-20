@@ -4,7 +4,7 @@ import { Reveal } from "./Reveal";
 export function FinalCTA() {
   return (
     <section className="hero-mesh relative overflow-hidden py-28 sm:py-36">
-      <div className="dot-grid pointer-events-none absolute inset-0 opacity-40 [mask-image:radial-gradient(70%_70%_at_50%_50%,black,transparent)]" />
+      <div className="dot-grid-dark pointer-events-none absolute inset-0 opacity-40 [mask-image:radial-gradient(70%_70%_at_50%_50%,black,transparent)]" />
       <div className="relative mx-auto max-w-3xl px-5 text-center">
         <Reveal>
           <h2 className="text-4xl font-semibold tracking-tight text-text-primary sm:text-5xl">
@@ -28,7 +28,7 @@ export function FinalCTA() {
             </Link>
             <Link
               href="/docs/getting-started"
-              className="inline-flex w-full items-center justify-center rounded-full border border-black/[0.1] bg-white/70 px-8 py-3.5 text-[16px] font-semibold text-text-primary no-underline backdrop-blur-md transition-all duration-200 hover:bg-white sm:w-auto"
+              className="inline-flex w-full items-center justify-center rounded-full border border-white/[0.16] bg-white/[0.06] px-8 py-3.5 text-[16px] font-semibold text-text-primary no-underline backdrop-blur-md transition-all duration-200 hover:bg-white/[0.12] sm:w-auto"
             >
               Read the docs
             </Link>

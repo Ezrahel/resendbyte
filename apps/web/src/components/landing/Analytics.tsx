@@ -31,7 +31,7 @@ function Counter({ value, decimals = 0, suffix = "", label }: CounterProps) {
   }, [inView, value]);
 
   return (
-    <div ref={ref} className="rounded-2xl border border-black/[0.06] bg-white/60 p-5 text-center">
+    <div ref={ref} className="rounded-2xl border border-white/[0.1] bg-white/[0.05] p-5 text-center">
       <div className="text-3xl font-semibold tracking-tight text-text-primary sm:text-4xl">
         {display.toLocaleString(undefined, { minimumFractionDigits: decimals, maximumFractionDigits: decimals })}
         {suffix}
@@ -72,8 +72,8 @@ export function Analytics() {
         </div>
 
         <Reveal delay={200}>
-          <div className="mt-12 overflow-hidden rounded-2xl border border-black/[0.06] bg-white/60">
-            <div className="flex items-center justify-between border-b border-black/[0.06] px-5 py-3.5">
+          <div className="mt-12 overflow-hidden rounded-2xl border border-white/[0.1] bg-white/[0.05]">
+            <div className="flex items-center justify-between border-b border-white/[0.1] px-5 py-3.5">
               <span className="text-[13px] font-semibold text-text-primary">Delivery rate — last 30 days</span>
               <div className="flex items-center gap-1.5">
                 <span className="h-1.5 w-1.5 rounded-full bg-success" />

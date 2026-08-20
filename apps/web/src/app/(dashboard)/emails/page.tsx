@@ -116,7 +116,7 @@ export default function EmailsPage() {
       {loading ? (
         <div className="glass rounded-[16px] overflow-hidden">
           {Array.from({ length: 8 }).map((_, i) => (
-            <div key={i} className="flex items-center gap-4 px-5 py-4 border-b border-[rgba(0,0,0,0.04)]">
+            <div key={i} className="flex items-center gap-4 px-5 py-4 border-b border-[rgba(255,255,255,0.08)]">
               <Skeleton className="h-4 w-40" />
               <Skeleton className="h-4 w-56" />
               <Skeleton className="h-5 w-20 rounded-full" />
@@ -134,7 +134,7 @@ export default function EmailsPage() {
       ) : (
         <>
           <div className="glass rounded-[16px] overflow-hidden animate-fade-in">
-            <div className="grid grid-cols-[1fr_2fr_auto_auto_auto] gap-4 px-5 py-3 text-[13px] font-medium text-text-secondary border-b border-[rgba(0,0,0,0.04)]">
+            <div className="grid grid-cols-[1fr_2fr_auto_auto_auto] gap-4 px-5 py-3 text-[13px] font-medium text-text-secondary border-b border-[rgba(255,255,255,0.08)]">
               <span>To</span>
               <span>Subject</span>
               <span>Status</span>
@@ -145,7 +145,7 @@ export default function EmailsPage() {
               return (
                 <div
                   key={email.id}
-                  className="grid grid-cols-[1fr_2fr_auto_auto_auto] gap-4 px-5 py-3.5 border-b border-[rgba(0,0,0,0.04)] last:border-0 hover:bg-accent-glass cursor-pointer transition-colors items-center text-[15px]"
+                  className="grid grid-cols-[1fr_2fr_auto_auto_auto] gap-4 px-5 py-3.5 border-b border-[rgba(255,255,255,0.08)] last:border-0 hover:bg-accent-glass cursor-pointer transition-colors items-center text-[15px]"
                   onClick={() => router.push(`/emails/${email.id}`)}
                 >
                   <span className="text-text-primary truncate">{truncate(email.to_address, 30)}</span>

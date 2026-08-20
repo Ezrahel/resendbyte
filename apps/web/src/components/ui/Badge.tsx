@@ -14,7 +14,7 @@ const variantStyles: Record<BadgeVariant, string> = {
   warning: "bg-warning/15 text-warning",
   danger: "bg-danger/15 text-danger",
   info: "bg-accent-glass text-accent",
-  neutral: "bg-[rgba(0,0,0,0.04)] text-text-tertiary",
+  neutral: "bg-[rgba(255,255,255,0.06)] text-text-tertiary",
 };
 
 const dotColors: Record<BadgeVariant, string> = {

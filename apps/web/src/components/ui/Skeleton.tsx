@@ -14,7 +14,7 @@ export function Skeleton({ className, count = 1 }: SkeletonProps) {
             key={i}
             className={clsx(
               "glass-sm animate-pulse-soft",
-              "bg-[rgba(0,0,0,0.03)]",
+              "bg-[rgba(255,255,255,0.05)]",
               className || "h-4 w-full",
             )}
           />
@@ -27,7 +27,7 @@ export function Skeleton({ className, count = 1 }: SkeletonProps) {
     <div
       className={clsx(
         "glass-sm animate-pulse-soft",
-        "bg-[rgba(0,0,0,0.03)]",
+        "bg-[rgba(255,255,255,0.05)]",
         className || "h-4 w-full",
       )}
     />

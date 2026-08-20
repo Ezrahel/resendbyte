@@ -60,12 +60,12 @@ export function DeliveryTimeline({ status, metrics, deliveries, scheduledAt }: D
               <div className="flex flex-col items-center">
                 <div className={clsx(
                   "w-9 h-9 rounded-full flex items-center justify-center shrink-0",
-                  isActive && !isFailed ? "bg-accent text-white" : "bg-[rgba(0,0,0,0.04)] text-text-tertiary",
+                  isActive && !isFailed ? "bg-accent text-white" : "bg-[rgba(255,255,255,0.06)] text-text-tertiary",
                   isFailed && step.key === "delivered" ? "bg-danger/15 text-danger" : "",
                 )}>
                   {isFailed && step.key === "delivered" ? <AlertTriangle className="h-4 w-4" /> : step.icon}
                 </div>
-                {i < activeSteps.length - 1 && <div className={clsx("w-px flex-1 min-h-[12px]", isActive ? "bg-accent/40" : "bg-[rgba(0,0,0,0.06)]")} />}
+                {i < activeSteps.length - 1 && <div className={clsx("w-px flex-1 min-h-[12px]", isActive ? "bg-accent/40" : "bg-[rgba(255,255,255,0.1)]")} />}
               </div>
               <div className="pb-5 flex-1">
                 <div className="flex items-center gap-2">

@@ -44,7 +44,7 @@ export function RecentActivityTable({ data }: RecentActivityTableProps) {
             {data.map((email) => {
               const statusInfo = STATUS_MAP[email.status] || { variant: "neutral" as const, label: email.status };
               return (
-                <tr key={email.id} className="border-t border-[rgba(0,0,0,0.04)]">
+                <tr key={email.id} className="border-t border-[rgba(255,255,255,0.08)]">
                   <td className="py-2.5 pr-4 text-[14px] text-text-secondary whitespace-nowrap">
                     {relativeTime(email.created_at)}
                   </td>

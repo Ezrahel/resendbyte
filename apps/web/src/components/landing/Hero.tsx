@@ -5,13 +5,13 @@ import { Reveal } from "./Reveal";
 export function Hero() {
   return (
     <section className="hero-mesh relative overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-28">
-      <div className="dot-grid pointer-events-none absolute inset-0 opacity-40 [mask-image:radial-gradient(70%_60%_at_50%_0%,black,transparent)]" />
+      <div className="dot-grid-dark pointer-events-none absolute inset-0 opacity-40 [mask-image:radial-gradient(70%_60%_at_50%_0%,black,transparent)]" />
 
       <div className="relative mx-auto max-w-6xl px-5 text-center">
         <Reveal>
           <Link
             href="/docs/getting-started"
-            className="inline-flex items-center gap-2 rounded-full border border-black/[0.08] bg-white px-4 py-1.5 text-[13px] font-medium text-text-secondary no-underline shadow-sm transition-colors hover:text-text-primary"
+            className="inline-flex items-center gap-2 rounded-full border border-white/[0.14] bg-white/[0.06] px-4 py-1.5 text-[13px] font-medium text-text-secondary no-underline shadow-sm transition-colors hover:text-text-primary"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-brand-500" />
             Get to your first send in 5 minutes
@@ -43,7 +43,7 @@ export function Hero() {
             </Link>
             <Link
               href="/docs/getting-started"
-              className="inline-flex w-full items-center justify-center rounded-full border border-black/[0.1] bg-white/70 px-8 py-3.5 text-[16px] font-semibold text-text-primary no-underline backdrop-blur-md transition-all duration-200 hover:bg-white sm:w-auto"
+              className="inline-flex w-full items-center justify-center rounded-full border border-white/[0.16] bg-white/[0.06] px-8 py-3.5 text-[16px] font-semibold text-text-primary no-underline backdrop-blur-md transition-all duration-200 hover:bg-white/[0.12] sm:w-auto"
             >
               Read the docs
             </Link>

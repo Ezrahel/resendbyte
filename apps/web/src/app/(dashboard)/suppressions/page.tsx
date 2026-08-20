@@ -127,7 +127,7 @@ export default function SuppressionsPage() {
       {loading ? (
         <div className="glass rounded-[16px] overflow-hidden">
           {Array.from({ length: 5 }).map((_, i) => (
-            <div key={i} className="flex items-center gap-4 px-5 py-4 border-b border-[rgba(0,0,0,0.04)]">
+            <div key={i} className="flex items-center gap-4 px-5 py-4 border-b border-[rgba(255,255,255,0.08)]">
               <Skeleton className="h-4 w-48" />
               <Skeleton className="h-5 w-24 rounded-full" />
               <Skeleton className="h-4 w-20 ml-auto" />
@@ -144,7 +144,7 @@ export default function SuppressionsPage() {
       ) : (
         <>
           <div className="glass rounded-[16px] overflow-hidden animate-fade-in">
-            <div className="grid grid-cols-[1fr_auto_auto_auto] gap-4 px-5 py-3 text-[13px] font-medium text-text-secondary border-b border-[rgba(0,0,0,0.04)]">
+            <div className="grid grid-cols-[1fr_auto_auto_auto] gap-4 px-5 py-3 text-[13px] font-medium text-text-secondary border-b border-[rgba(255,255,255,0.08)]">
               <span>Email</span>
               <span>Reason</span>
               <span>Date</span>
@@ -153,7 +153,7 @@ export default function SuppressionsPage() {
             {data.map((item: any) => {
               const rb = REASON_BADGE[item.reason] || { variant: "neutral" as const, label: item.reason };
               return (
-                <div key={item.id} className="grid grid-cols-[1fr_auto_auto_auto] gap-4 px-5 py-3.5 border-b border-[rgba(0,0,0,0.04)] last:border-0 hover:bg-accent-glass transition-colors items-center text-[15px]">
+                <div key={item.id} className="grid grid-cols-[1fr_auto_auto_auto] gap-4 px-5 py-3.5 border-b border-[rgba(255,255,255,0.08)] last:border-0 hover:bg-accent-glass transition-colors items-center text-[15px]">
                   <span className="text-text-primary truncate">{item.email}</span>
                   <Badge variant={rb.variant as any}>{rb.label}</Badge>
                   <span className="text-text-tertiary text-[13px]">{formatDate(item.created_at)}</span>

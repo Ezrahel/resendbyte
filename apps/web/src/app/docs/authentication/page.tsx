@@ -27,14 +27,14 @@ export default function AuthenticationPage() {
         <h3 className="text-[17px] font-medium text-text-primary mt-6 mb-2">Key Types</h3>
         <table className="w-full text-[14px]">
           <thead>
-            <tr className="border-b border-[rgba(0,0,0,0.06)]">
+            <tr className="border-b border-[rgba(255,255,255,0.1)]">
               <th className="text-left py-2 pr-4 font-medium text-text-primary">Prefix</th>
               <th className="text-left py-2 pr-4 font-medium text-text-primary">Type</th>
               <th className="text-left py-2 font-medium text-text-primary">Behavior</th>
             </tr>
           </thead>
           <tbody>
-            <tr className="border-b border-[rgba(0,0,0,0.04)]">
+            <tr className="border-b border-[rgba(255,255,255,0.08)]">
               <td className="py-2 pr-4 font-mono text-[13px]">live_</td>
               <td className="py-2 pr-4 text-text-secondary">Live</td>
               <td className="py-2 text-text-secondary">Sends real emails through configured providers</td>
@@ -50,14 +50,14 @@ export default function AuthenticationPage() {
         <h3 className="text-[17px] font-medium text-text-primary mt-6 mb-2">Available Scopes</h3>
         <table className="w-full text-[14px]">
           <thead>
-            <tr className="border-b border-[rgba(0,0,0,0.06)]">
+            <tr className="border-b border-[rgba(255,255,255,0.1)]">
               <th className="text-left py-2 pr-4 font-medium text-text-primary">Scope</th>
               <th className="text-left py-2 font-medium text-text-primary">Permissions</th>
             </tr>
           </thead>
           <tbody>
             {scopes.map((s) => (
-              <tr key={s.scope} className="border-b border-[rgba(0,0,0,0.04)]">
+              <tr key={s.scope} className="border-b border-[rgba(255,255,255,0.08)]">
                 <td className="py-2 pr-4 font-mono text-[13px] text-text-primary">{s.scope}</td>
                 <td className="py-2 text-text-secondary">{s.description}</td>
               </tr>

@@ -67,17 +67,17 @@ export default function DomainsPage() {
         </p>
         <table className="w-full text-[14px]">
           <thead>
-            <tr className="border-b border-[rgba(0,0,0,0.06)]">
+            <tr className="border-b border-[rgba(255,255,255,0.1)]">
               <th className="text-left py-2 pr-4 font-medium text-text-primary">Field</th>
               <th className="text-left py-2 font-medium text-text-primary">Value</th>
             </tr>
           </thead>
           <tbody>
-            <tr className="border-b border-[rgba(0,0,0,0.04)]">
+            <tr className="border-b border-[rgba(255,255,255,0.08)]">
               <td className="py-2 pr-4 text-text-secondary">Type</td>
               <td className="py-2 font-mono text-[13px]">TXT</td>
             </tr>
-            <tr className="border-b border-[rgba(0,0,0,0.04)]">
+            <tr className="border-b border-[rgba(255,255,255,0.08)]">
               <td className="py-2 pr-4 text-text-secondary">Name</td>
               <td className="py-2 font-mono text-[13px]">resendbyte._domainkey.yourdomain.com</td>
             </tr>
@@ -95,17 +95,17 @@ export default function DomainsPage() {
         </p>
         <table className="w-full text-[14px]">
           <thead>
-            <tr className="border-b border-[rgba(0,0,0,0.06)]">
+            <tr className="border-b border-[rgba(255,255,255,0.1)]">
               <th className="text-left py-2 pr-4 font-medium text-text-primary">Field</th>
               <th className="text-left py-2 font-medium text-text-primary">Value</th>
             </tr>
           </thead>
           <tbody>
-            <tr className="border-b border-[rgba(0,0,0,0.04)]">
+            <tr className="border-b border-[rgba(255,255,255,0.08)]">
               <td className="py-2 pr-4 text-text-secondary">Type</td>
               <td className="py-2 font-mono text-[13px]">TXT</td>
             </tr>
-            <tr className="border-b border-[rgba(0,0,0,0.04)]">
+            <tr className="border-b border-[rgba(255,255,255,0.08)]">
               <td className="py-2 pr-4 text-text-secondary">Name</td>
               <td className="py-2 font-mono text-[13px]">yourdomain.com</td>
             </tr>
@@ -123,17 +123,17 @@ export default function DomainsPage() {
         </p>
         <table className="w-full text-[14px]">
           <thead>
-            <tr className="border-b border-[rgba(0,0,0,0.06)]">
+            <tr className="border-b border-[rgba(255,255,255,0.1)]">
               <th className="text-left py-2 pr-4 font-medium text-text-primary">Field</th>
               <th className="text-left py-2 font-medium text-text-primary">Value</th>
             </tr>
           </thead>
           <tbody>
-            <tr className="border-b border-[rgba(0,0,0,0.04)]">
+            <tr className="border-b border-[rgba(255,255,255,0.08)]">
               <td className="py-2 pr-4 text-text-secondary">Type</td>
               <td className="py-2 font-mono text-[13px]">TXT</td>
             </tr>
-            <tr className="border-b border-[rgba(0,0,0,0.04)]">
+            <tr className="border-b border-[rgba(255,255,255,0.08)]">
               <td className="py-2 pr-4 text-text-secondary">Name</td>
               <td className="py-2 font-mono text-[13px]">_dmarc.yourdomain.com</td>
             </tr>
@@ -174,21 +174,21 @@ export default function DomainsPage() {
       <Section title="Domain Statuses">
         <table className="w-full text-[14px]">
           <thead>
-            <tr className="border-b border-[rgba(0,0,0,0.06)]">
+            <tr className="border-b border-[rgba(255,255,255,0.1)]">
               <th className="text-left py-2 pr-4 font-medium text-text-primary">Status</th>
               <th className="text-left py-2 font-medium text-text-primary">Description</th>
             </tr>
           </thead>
           <tbody>
-            <tr className="border-b border-[rgba(0,0,0,0.04)]">
+            <tr className="border-b border-[rgba(255,255,255,0.08)]">
               <td className="py-2 pr-4 font-mono text-[13px]">pending</td>
               <td className="py-2 text-text-secondary">Domain added, waiting for DNS configuration</td>
             </tr>
-            <tr className="border-b border-[rgba(0,0,0,0.04)]">
+            <tr className="border-b border-[rgba(255,255,255,0.08)]">
               <td className="py-2 pr-4 font-mono text-[13px]">verifying</td>
               <td className="py-2 text-text-secondary">DNS records are being checked</td>
             </tr>
-            <tr className="border-b border-[rgba(0,0,0,0.04)]">
+            <tr className="border-b border-[rgba(255,255,255,0.08)]">
               <td className="py-2 pr-4 font-mono text-[13px]">verified</td>
               <td className="py-2 text-text-secondary">All DNS records are correctly configured</td>
             </tr>

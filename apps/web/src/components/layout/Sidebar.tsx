@@ -43,7 +43,7 @@ export function Sidebar({ collapsed, onToggle }: SidebarProps) {
         collapsed ? "w-16" : "w-56",
       )}
     >
-      <div className="flex items-center h-14 px-4 border-b border-[rgba(0,0,0,0.06)] shrink-0">
+      <div className="flex items-center h-14 px-4 border-b border-[rgba(255,255,255,0.1)] shrink-0">
         <span
           className={clsx(
             "font-semibold text-[17px] tracking-tight text-text-primary transition-opacity duration-200",
@@ -89,7 +89,7 @@ export function Sidebar({ collapsed, onToggle }: SidebarProps) {
         })}
       </nav>
 
-      <div className="p-2 border-t border-[rgba(0,0,0,0.06)] shrink-0 flex flex-col gap-1">
+      <div className="p-2 border-t border-[rgba(255,255,255,0.1)] shrink-0 flex flex-col gap-1">
         <Link
           href="/docs"
           className={clsx(

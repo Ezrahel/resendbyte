@@ -58,7 +58,7 @@ export default function TemplatesPage() {
       {loading ? (
         <div className="glass rounded-[16px] overflow-hidden">
           {Array.from({ length: 5 }).map((_, i) => (
-            <div key={i} className="flex items-center gap-4 px-5 py-4 border-b border-[rgba(0,0,0,0.04)]">
+            <div key={i} className="flex items-center gap-4 px-5 py-4 border-b border-[rgba(255,255,255,0.08)]">
               <Skeleton className="h-4 w-48" />
               <Skeleton className="h-4 w-32" />
               <Skeleton className="h-4 w-24 ml-auto" />
@@ -75,7 +75,7 @@ export default function TemplatesPage() {
       ) : (
         <>
           <div className="glass rounded-[16px] overflow-hidden animate-fade-in">
-            <div className="grid grid-cols-[1fr_1fr_auto] gap-4 px-5 py-3 text-[13px] font-medium text-text-secondary border-b border-[rgba(0,0,0,0.04)]">
+            <div className="grid grid-cols-[1fr_1fr_auto] gap-4 px-5 py-3 text-[13px] font-medium text-text-secondary border-b border-[rgba(255,255,255,0.08)]">
               <span>Name</span>
               <span>Slug</span>
               <span>Created</span>
@@ -83,7 +83,7 @@ export default function TemplatesPage() {
             {data.map((template: any) => (
               <div
                 key={template.id}
-                className="grid grid-cols-[1fr_1fr_auto] gap-4 px-5 py-3.5 border-b border-[rgba(0,0,0,0.04)] last:border-0 hover:bg-accent-glass cursor-pointer transition-colors items-center text-[15px]"
+                className="grid grid-cols-[1fr_1fr_auto] gap-4 px-5 py-3.5 border-b border-[rgba(255,255,255,0.08)] last:border-0 hover:bg-accent-glass cursor-pointer transition-colors items-center text-[15px]"
                 onClick={() => router.push(`/templates/${template.id}`)}
               >
                 <span className="text-text-primary font-medium">{template.name}</span>

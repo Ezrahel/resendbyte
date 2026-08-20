@@ -70,7 +70,7 @@ export function FAQ() {
   const [open, setOpen] = useState(0);
 
   return (
-    <section id="faq" className="border-t border-black/[0.05] py-24 sm:py-28">
+    <section id="faq" className="border-t border-white/[0.08] py-24 sm:py-28">
       <div className="mx-auto max-w-3xl px-5">
         <Reveal className="text-center">
           <p className="text-[13px] font-medium uppercase tracking-[0.14em] text-brand-600">FAQ</p>

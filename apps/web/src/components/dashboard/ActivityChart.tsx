@@ -22,11 +22,11 @@ export function ActivityChart({ data }: ActivityChartProps) {
         <AreaChart data={data} margin={{ top: 5, right: 5, left: -20, bottom: 0 }}>
           <defs>
             <linearGradient id="colorCount" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#333" stopOpacity={0.15} />
-              <stop offset="95%" stopColor="#333" stopOpacity={0} />
+              <stop offset="5%" stopColor="#6366f1" stopOpacity={0.35} />
+              <stop offset="95%" stopColor="#6366f1" stopOpacity={0} />
             </linearGradient>
           </defs>
-          <CartesianGrid strokeDasharray="3 3" stroke="rgba(0,0,0,0.04)" />
+          <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.06)" />
           <XAxis
             dataKey="created_at"
             tickFormatter={formatDateLabel}
@@ -55,11 +55,11 @@ export function ActivityChart({ data }: ActivityChartProps) {
           <Area
             type="monotone"
             dataKey="count"
-            stroke="#333"
+            stroke="#6366f1"
             strokeWidth={2}
             fill="url(#colorCount)"
             dot={false}
-            activeDot={{ r: 4, fill: "#333" }}
+            activeDot={{ r: 4, fill: "#818cf8" }}
           />
         </AreaChart>
       </ResponsiveContainer>
