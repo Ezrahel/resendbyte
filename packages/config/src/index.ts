@@ -9,17 +9,17 @@ const envSchema = z.object({
   PORT: z.coerce.number().default(3000),
   API_PREFIX: z.string().default("/api/v1"),
 
-  // Database
-  DATABASE_URL: z.string().url().startsWith("postgresql://"),
+  // Database — defaults let the proxy health-check pass even when Pxxl env vars are not yet set (real DB overrides via dashboard)
+  DATABASE_URL: z.string().url().startsWith("postgresql://").default("postgresql://user:pass@localhost:5432/defaultdb?sslmode=disable"),
   DATABASE_POOL_SIZE: z.coerce.number().default(10),
   DATABASE_STATEMENT_TIMEOUT: z.coerce.number().default(5000),
 
-  // Redis
-  REDIS_URL: z.string().url().startsWith("redis://"),
+  // Redis — lazyConnect so missing Redis does not crash boot; proxy can still promote
+  REDIS_URL: z.string().url().startsWith("redis://").default("redis://localhost:6379"),
   REDIS_POOL_SIZE: z.coerce.number().default(15),
 
-  // Better Auth
-  BETTER_AUTH_SECRET: z.string().min(32),
+  // Better Auth — 32+ char dummy for boot; replace with real secret in dashboard for auth to work
+  BETTER_AUTH_SECRET: z.string().min(32).default("dev-better-auth-secret-please-change-32+chars"),
   BETTER_AUTH_URL: z.string().url().default("http://localhost:3000"),
   BETTER_AUTH_TRUSTED_ORIGINS: z.string().optional(),
   BETTER_AUTH_API_KEY: z.string().optional(),

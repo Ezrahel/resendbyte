@@ -121,8 +121,18 @@ async function buildServer(): Promise<FastifyInstance> {
     reply.header("Content-Type", "text/plain; charset=utf-8").send(metrics);
   });
 
+  // Pxxl proxy promotion checks TCP/port then GET /health during activation window.
+  // Must answer quickly even when DB/Redis are not yet configured — return degraded instead of hanging.
   server.get("/health", async () => {
-    const dbHealthy = await checkDatabaseConnection();
+    let dbHealthy = false;
+    try {
+      dbHealthy = await Promise.race([
+        checkDatabaseConnection(),
+        new Promise<boolean>((resolve) => setTimeout(() => resolve(false), 2000)),
+      ]);
+    } catch {
+      dbHealthy = false;
+    }
     return {
       status: dbHealthy ? "healthy" : "degraded",
       timestamp: new Date().toISOString(),
