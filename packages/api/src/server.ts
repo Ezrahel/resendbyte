@@ -141,6 +141,14 @@ async function buildServer(): Promise<FastifyInstance> {
     };
   });
 
+  server.get("/", async () => ({
+    name: "ResendByte API",
+    version: "0.2.0",
+    status: "ok",
+    docs: "/docs",
+    health: "/health",
+  }));
+
   server.get("/ready", async () => {
     const dbHealthy = await checkDatabaseConnection();
     if (!dbHealthy) throw new Error("Database not ready");
