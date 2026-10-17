@@ -1,6 +1,7 @@
 import type { FastifyInstance } from "fastify";
 import { z } from "zod";
 import { AuthService, EmailService, DomainService, TemplateService, WebhookService, AnalyticsService, SuppressionService, StorageService, BillingService, AuditService, ProviderConfigService } from "@resendbyte/domain";
+import type { CreateProviderConfigInput, CreateWebhookInput, SendEmailInput } from "@resendbyte/domain";
 import { db } from "@resendbyte/database";
 import { ValidationError, NotFoundError, InternalError, QuotaExceededError, UnauthorizedError } from "@resendbyte/errors";
 import { verifyWebhookSignature } from "@resendbyte/crypto";
@@ -36,12 +37,12 @@ const createAPIKeySchema = z.object({
   allowedIPs: z.array(z.string().regex(/^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9])\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9])$/)).optional(),
   environment: z.enum(["live", "sandbox"]).optional(),
 });
-const createWebhookSchema = z.object({
+const createWebhookSchema: z.ZodType<CreateWebhookInput> = z.object({
   url: z.string().url(),
   events: z.array(z.string()).min(1),
   secret: z.string().optional(),
 });
-const sendEmailSchema = z.object({
+const sendEmailSchema: z.ZodType<SendEmailInput & { scheduledAt?: string }> = z.object({
   from: z.string().email(),
   to: z.string().email().or(z.array(z.string().email())),
   subject: z.string().min(1).max(998),
@@ -59,7 +60,7 @@ const sendTemplateSchema = z.object({
 });
 
 const providerTypeSchema = z.enum(["smtp", "sendgrid", "mailgun", "ses", "postmark"]);
-const createProviderConfigSchema = z.object({
+const createProviderConfigSchema: z.ZodType<CreateProviderConfigInput> = z.object({
   providerType: providerTypeSchema,
   name: z.string().min(1).max(255),
   credentials: z.string().min(1).max(4096),
