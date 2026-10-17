@@ -121,23 +121,13 @@ async function buildServer(): Promise<FastifyInstance> {
     reply.header("Content-Type", "text/plain; charset=utf-8").send(metrics);
   });
 
-  // Pxxl proxy promotion checks TCP/port then GET /health during activation window.
-  // Must answer quickly even when DB/Redis are not yet configured — return degraded instead of hanging.
+  // Liveness must not depend on external services; readiness checks dependencies.
   server.get("/health", async () => {
-    let dbHealthy = false;
-    try {
-      dbHealthy = await Promise.race([
-        checkDatabaseConnection(),
-        new Promise<boolean>((resolve) => setTimeout(() => resolve(false), 2000)),
-      ]);
-    } catch {
-      dbHealthy = false;
-    }
     return {
-      status: dbHealthy ? "healthy" : "degraded",
+      status: "healthy",
       timestamp: new Date().toISOString(),
       version: "0.2.0",
-      checks: { database: dbHealthy },
+      checks: { process: true },
     };
   });
 
@@ -189,7 +179,7 @@ async function start() {
     for (const signal of signals) {
       process.on(signal, async () => {
         logger.info({ signal }, "Shutting down...");
-        await shutdown();
+        await shutdown(server);
         process.exit(0);
       });
     }
@@ -199,9 +189,10 @@ async function start() {
   }
 }
 
-async function shutdown(): Promise<void> {
+async function shutdown(server: FastifyInstance): Promise<void> {
   logger.info("Shutting down gracefully...");
-  await Promise.all([closeDatabase(), closeQueueConnections(), shutdownTelemetry(), stopSmtpServer()]);
+  await Promise.all([server.close(), stopSmtpServer()]);
+  await Promise.all([closeDatabase(), closeQueueConnections(), shutdownTelemetry()]);
   logger.info("Shutdown complete");
 }
 

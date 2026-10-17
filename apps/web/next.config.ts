@@ -1,8 +1,11 @@
 import type { NextConfig } from "next";
+import path from "node:path";
 
 const apiInternalUrl = process.env.API_INTERNAL_URL || "http://localhost:3001";
+const workspaceRoot = path.resolve(process.cwd(), "../..");
 
 const nextConfig: NextConfig = {
+  turbopack: { root: workspaceRoot },
   async rewrites() {
     return [
       {

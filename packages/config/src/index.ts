@@ -94,6 +94,24 @@ const envSchema = z.object({
   CORS_ORIGIN: z.string().default("*"),
   IP_ALLOWLIST: z.string().optional(),
   REQUEST_TIMEOUT_MS: z.coerce.number().default(30000),
+}).superRefine((configuration, context) => {
+  if (configuration.NODE_ENV !== "production") return;
+
+  if (configuration.BETTER_AUTH_SECRET === "dev-better-auth-secret-please-change-32+chars") {
+    context.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ["BETTER_AUTH_SECRET"],
+      message: "A production BETTER_AUTH_SECRET must be explicitly configured",
+    });
+  }
+
+  if (!configuration.ENCRYPTION_KEY) {
+    context.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ["ENCRYPTION_KEY"],
+      message: "ENCRYPTION_KEY is required in production",
+    });
+  }
 });
 
 export type Env = z.infer<typeof envSchema>;
